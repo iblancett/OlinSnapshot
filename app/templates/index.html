@@ -4,13 +4,12 @@
     </head>
     <body>
         <h1>Hello, {{ user.username }}!</h1>
-	<script type="text/javascript" src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<div id="chart"></div>
 	<h1>Welcome to Olin Snapshot.</h1>
-	<script src="../static/js/main.js"></script>
 
-	<p>Each bubble represents the proportion of emails in each category.</p>
-        <a href="https://github.com/KaitlynKeil/OlinSnapshot">Check out our github!</a> 
+	<h2><a href="{{url_for('food')}}">FOOD</a></h2>
+  <h2><a href="{{url_for('event')}}">EVENTS</a></h2>
+  <h2><a href="{{url_for('lost')}}">LOST ITEMS</a></h2>
+  <h2><a href="{{url_for('other')}}">OTHER</a></h2>
+        <a href="https://github.com/iblancett/OlinSnapshot">Check out our github!</a>
     </body>
 </html>
