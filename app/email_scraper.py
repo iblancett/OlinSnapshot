@@ -87,8 +87,10 @@ def get_mail():
             line = msg[i]
             if "CarpediemOn Behalf Of" in line:
                 header_index = i
-                msg_info = msg[i:i+6]
-                i = i + 6
+                while line != "":
+                    msg_info.append(line)
+                    i += 1
+                    line = msg[i]
             elif header_index != -1:
                 if line == "":
                     i = i + 1

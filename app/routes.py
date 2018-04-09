@@ -14,6 +14,8 @@ def grab_cat(cat):
     for i in range(len(json_dict["data"]["children"])):
         json_dict["data"]["children"][i]["body"] = "\'".join(json_dict["data"]["children"][i]["body"].split("=E2=80=99"))
         json_dict["data"]["children"][i]["name"] = "\'".join(json_dict["data"]["children"][i]["name"].split("=E2=80=99"))
+        json_dict["data"]["children"][i]["body"] = "".join(json_dict["data"]["children"][i]["body"].split("= "))
+        json_dict["data"]["children"][i]["name"] = "".join(json_dict["data"]["children"][i]["name"].split("= "))
     pp.close_conn(conn, cur) # close the connection, but don't change things
     return json_dict # return the json, which will be accessible from the url/data
 
