@@ -101,6 +101,8 @@ def get_mail():
                     body.append(line)
 
             i = i + 1
+        if header_index == -1:
+            continue
         current_dict = list_to_dict(msg_info)
         current_dict['body'] = " ".join(body)
         categories = []
